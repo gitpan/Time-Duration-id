@@ -1,0 +1,29 @@
+NAME
+    Time::Duration::id - Describe time duration in Indonesian
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+        use Time::Duration::id;
+
+        my $duration = duration(time() - $start_time);
+
+DESCRIPTION
+    "Time::Duration::id" is a localized version of "Time::Duration".
+
+FUNCTIONS
+    See Time::Duration.
+
+SEE ALSO
+    Time::Duration, Time::Duration::Locale
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
