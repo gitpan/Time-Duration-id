@@ -1,10 +1,10 @@
 package Time::Duration::id;
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 use base qw(Exporter);
 
@@ -158,23 +158,36 @@ Time::Duration::id - Describe time duration in Indonesian
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
-    use Time::Duration::id;
+ use Time::Duration::id;
+ my $duration = duration(310); # => "5 menit 10 detik"
 
-    my $duration = duration(time() - $start_time);
+Use it along with Time::Duration::Patch::Millisecond:
+
+ use Time::Duration::Patch::Millisecond;
+ use Time::Duration::id;
+ my $duration = duration(3.1); # => "3 detik 100 milidetik"
 
 =head1 DESCRIPTION
 
 C<Time::Duration::id> is a localized version of C<Time::Duration>.
+
+It already contains translation for "millisecond" so you can use it with
+L<Time::Duration::Patch::Millisecond>.
 
 =for Pod::Coverage .+
 
 =head1 FUNCTIONS
 
 See L<Time::Duration>.
+
+=head1 CREDITS
+
+The code was first copied from L<Time::Duration::fr> by Sébastien
+Aperghis-Tramoni.
 
 =head1 SEE ALSO
 
@@ -186,7 +199,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Steven Haryanto.
+This software is copyright (c) 2013 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
