@@ -4,7 +4,7 @@ use 5.010001;
 use strict;
 use warnings;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 use base qw(Exporter);
 
@@ -158,25 +158,19 @@ Time::Duration::id - Describe time duration in Indonesian
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
  use Time::Duration::id;
  my $duration = duration(310); # => "5 menit 10 detik"
 
-Use it along with Time::Duration::Patch::Millisecond:
-
- use Time::Duration::Patch::Millisecond;
- use Time::Duration::id;
- my $duration = duration(3.1); # => "3 detik 100 milidetik"
+ $Time::Duration::MILLISECOND = 1;
+ $duration = duration(3.1); # => "3 detik 100 milidetik"
 
 =head1 DESCRIPTION
 
 C<Time::Duration::id> is a localized version of C<Time::Duration>.
-
-It already contains translation for "millisecond" so you can use it with
-L<Time::Duration::Patch::Millisecond>.
 
 =for Pod::Coverage .+
 

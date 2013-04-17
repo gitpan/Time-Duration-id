@@ -14,9 +14,9 @@ meta-spec:
   version: 1.4
 name: Time-Duration-id
 requires:
-  Time::Duration: 0
+  Time::Duration: 1.1
   perl: 5.010001
 resources:
   homepage: http://metacpan.org/dist/Time-Duration-id
   repository: http://github.com/sharyanto/perl-Time-Duration-id
-version: 0.03
+version: 0.04
